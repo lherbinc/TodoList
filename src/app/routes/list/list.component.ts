@@ -35,22 +35,37 @@ export class ListComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('on submit');
     this.todolist.push(this.f.value);
-    this.f.reset();
-    }
+    this.reinitialiser();
+  }
 
-  isSelected(r: TodoRecord){
+  reinitialiser() {
+    this.f.reset({ tache: 'Définir votre tâche', isUrgent: false });
+  }
+
+  isSelected(r: TodoRecord) {
     return this.selectedRecords.has(r);
   }
 
-toggleSelection(r: TodoRecord){
-  if (this.isSelected(r)){
-    this.selectedRecords.delete(r);
-    return; 
+  toggleSelection(r: TodoRecord) {
+    if (this.isSelected(r)) {
+      this.selectedRecords.delete(r);
+      return;
+    }
+    this.selectedRecords.add(r);
   }
-  this.selectedRecords.add(r);
 
-}
+  hasSelectedRecords(r: TodoRecord) {
+    return this.selectedRecords.size > 0;
+  }
+
+  supprimeSelection() {
+    console.log('Supprime');
+    this.selectedRecords.forEach(r => {
+      const index = this.todolist.findIndex(x => x === r);
+      this.todolist.splice(index, 1);
+    });
+    this.selectedRecords.clear();
+  }
 
 }

@@ -8,15 +8,15 @@
       <label><input type="checkbox" formControlName="isUrgent">Tâche urgente ? </label>
     </div>
     <div>
-        <button type="reset">Réinitialiser</button>
+        <button (click)="reinitialiser()" type="reset">Réinitialiser</button>
       <button [disabled]="f.invalid" >Envoyer</button>
     </div>
   </form>
 </div>
 
 <div class="titre">Liste de vos tâches personnalisées</div>
-<div>
-  <button>Supprimer</button>
+<div class="contenu">
+  <button (click)="supprimeSelection()" *ngIf="hasSelectedRecords()">Supprimer</button>
 </div>
 <div class="table">
   <div class="header row">
