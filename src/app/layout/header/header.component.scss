@@ -5,13 +5,16 @@
     height: 3rem;
     background-color: antiquewhite;
     .logo {
+        display: flex;
+        align-items: center;
         img{ 
             width: 2rem;
             padding:0.5rem;
         }
         span{
             font-size: 1.5rem;
-            font-variant-caps: all-small-caps;
+            font-variant-caps:titling-caps;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
 
     }
