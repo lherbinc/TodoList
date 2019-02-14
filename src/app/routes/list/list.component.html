@@ -15,12 +15,15 @@
 </div>
 
 <div class="titre">Liste de vos tâches personnalisées</div>
+<div>
+  <button>Supprimer</button>
+</div>
 <div class="table">
   <div class="header row">
     <div class="col col-1">Tâche</div>
     <div class="col col-2">Urgent ?</div>
   </div>
-  <div *ngFor="let r of todolist" class="content row">
+  <div (click)="toggleSelection(r)" *ngFor="let r of todolist" class="content row" [class.selected]="isSelected(r)">
     <div class="col col-1">{{r.tache}}</div>
     <div class="col col-2">{{r.isUrgent}}</div>
   </div>

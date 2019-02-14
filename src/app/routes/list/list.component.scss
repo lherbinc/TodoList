@@ -24,6 +24,9 @@
                 flex-basis: 40%;
             }
         }
+        &.selected{
+            background-color: aquamarine;
+        }
     }
 }
 
