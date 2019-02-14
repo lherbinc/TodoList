@@ -1,12 +1,28 @@
-<div class="table">
-<div class="header row">
-  <div class="col col-1">Tâche</div>
-  <div class="col col-2">Urgent ?</div>
-  <div class="col col-3">Assigné à</div>
-</div>
-<div *ngFor="let r of todolist"  class="content row">
-    <div class="col col-1">{{r.text}}</div>
-    <div class="col col-2">{{r.isUrgent}}</div>
-    <div class="col col-3">{{r.acteur}}</div>
+<div class="titre">Renseignement d'une nouvelle tâche</div>
+<div class="contenu">
+<form [formGroup]="f" (ngSubmit)="onSubmit()">
+    <div>
+      <textarea cols="30" rows="4" formControlName="tache"></textarea>
     </div>
+    <div>
+      <label><input type="checkbox" formControlName="isUrgent">Tâche urgente ? </label>
+    </div>
+    <div>
+        <button type="reset">Réinitialiser</button>
+      <button [disabled]="f.invalid" >Envoyer</button>
+    </div>
+  </form>
 </div>
+
+<div class="titre">Liste de vos tâches personnalisées</div>
+<div class="table">
+  <div class="header row">
+    <div class="col col-1">Tâche</div>
+    <div class="col col-2">Urgent ?</div>
+  </div>
+  <div *ngFor="let r of todolist" class="content row">
+    <div class="col col-1">{{r.tache}}</div>
+    <div class="col col-2">{{r.isUrgent}}</div>
+  </div>
+</div>
+
