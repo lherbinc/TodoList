@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    background-color: antiquewhite;
+    .logo {
+        img{ 
+            width: 2rem;
+            padding:0.5rem;
+        }
+        span{
+            font-size: 1.5rem;
+            font-variant-caps: all-small-caps;
+            }
+
+    }
+    nav{
+        a{
+            padding: 1rem;
+            text-decoration: none;
+            color: chocolate;
+            font-weight: 600;
+            }
+        
+    }
+}
