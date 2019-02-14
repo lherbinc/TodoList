@@ -4,19 +4,9 @@
   <div class="col col-2">Urgent ?</div>
   <div class="col col-3">Assigné à</div>
 </div>
-<div class="content row">
-<div class="col col-1">Faire la vaisselle</div>
-<div class="col col-2">oui</div>
-<div class="col col-3">Parents</div>
-</div>
-<div class="content row">
-<div class="col col-1">Changer la couette</div>
-<div class="col col-2">non</div>
-<div class="col col-3">Parents</div>
-</div>
-<div class="content row">
-    <div class="col col-1">Mettre le couvert</div>
-    <div class="col col-2">non</div>
-    <div class="col col-3">Enfants</div>
+<div *ngFor="let r of todolist"  class="content row">
+    <div class="col col-1">{{r.text}}</div>
+    <div class="col col-2">{{r.isUrgent}}</div>
+    <div class="col col-3">{{r.acteur}}</div>
     </div>
 </div>
