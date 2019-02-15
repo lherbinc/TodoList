@@ -55,7 +55,7 @@ export class ListComponent implements OnInit {
     this.selectedRecords.add(r);
   }
 
-  hasSelectedRecords(r: TodoRecord) {
+  hasSelectedRecords() {
     return this.selectedRecords.size > 0;
   }
 
