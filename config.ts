@@ -1,4 +1,4 @@
 export const cfg = {
-    port: 80,
-    domain: 'http//localhost',
+    port: 9000,
+    domain: 'http://localhost:9000',
 }

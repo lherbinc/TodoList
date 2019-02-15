@@ -15,6 +15,7 @@ export class TodoListRestService {
   constructor(private http: HttpClient) { }
 
   synchro() {
+    console.log('endpoint', endpoint);
     this.http.get<{content: TodoRecord[]}>(endpoint)
         .subscribe(data => this.todolist = data.content);
   }
