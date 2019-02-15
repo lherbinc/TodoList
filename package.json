@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "deploy": "node run ./script/deploy.js",
     "server": "nodemon --exec ts-node --watch ./server/**/*.ts --project server/tsconfig.json server/server.ts"
   },
   "private": true,

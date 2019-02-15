@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StaticInjector } from '@angular/core/src/di/injector';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ReturnStatement } from '@angular/compiler';
 import { TodoRecord } from 'src/app/todorecord.interface';
 import { TodoListService } from 'src/app/todo-list.service';
 
